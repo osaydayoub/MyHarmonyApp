@@ -4,6 +4,8 @@ Harmony is a music app that showcases the top 10 songs in Hebrew and the top 10 
 By clicking on a song's title, users can access its lyrics/artist as well as its translation into the other language.
 </p>
 
+You can visit my Harmony app [here](https://my-harmony-o.netlify.app/).
+
 ---
 
 ## Project Structure
