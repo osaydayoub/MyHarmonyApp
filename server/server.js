@@ -21,7 +21,7 @@ import CoverSongRoute from "./routes/CoverSongRoute.js";
 import playlistRouter from "./routes/playlistRoutes.js";
 import loggingMiddleware from "./reqLogger.js";
 import commentsRouter from "./routes/coverSongCommentsRoute.js";
-import "./cron/updatePlaylistData.js";
+// import "./cron/updatePlaylistData.js";
 import textToSpeechRouter from "./routes/textToSpeechRoute.js";
 
 const __filename = fileURLToPath(import.meta.url);
