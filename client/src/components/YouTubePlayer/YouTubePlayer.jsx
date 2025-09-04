@@ -13,6 +13,8 @@ function YouTubePlayer() {
       setCurrentVideo(currentPlaylistData.currentSong?.videoId);
     }
   }, [currentPlaylistData]);
+  const id = currentPlaylistData?.currentSong?.videoId;
+  const isValidId = /^[A-Za-z0-9_-]{11}$/.test(String(id || ""));
   const opts = {
     height: "0",
     width: "0",
@@ -58,14 +60,17 @@ function YouTubePlayer() {
   };
   return (
     <div style={{ height: 0, width: 0 }}>
-      <YouTube
-        videoId={currentVideo}
-        opts={opts}
-        onReady={handlePlayerReady}
-        ref={playerRef}
-        onEnd={handleNextVideo}
-        style={{ width: 0, height: 0 }}
-      />
+      {isValidId && (
+        <YouTube
+          key={id}
+          videoId={currentVideo}
+          opts={opts}
+          onReady={handlePlayerReady}
+          ref={playerRef}
+          onEnd={handleNextVideo}
+          style={{ width: 0, height: 0 }}
+        />
+      )}
     </div>
   );
 }
