@@ -1,5 +1,5 @@
 # Use the official Puppeteer image as the base
-FROM ghcr.io/puppeteer/puppeteer:16.1.0
+FROM ghcr.io/puppeteer/puppeteer:21.5.0
 # Set the working directory inside the container to /app
 WORKDIR /app
 # The Puppeteer Docker image runs as a non-root user 'pptruser' by default.
